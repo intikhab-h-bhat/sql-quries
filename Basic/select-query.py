@@ -25,3 +25,19 @@ select Name from world.country where name like '%United%'
 select name,Population,SurfaceArea from world.country 
 where 
 SurfaceArea >3000000 or Population >250000000
+
+# Show the countries that are big by area (more than 3 million) or big by population (more than 250 million) but not both. Show name, population and area.
+select name,Population,SurfaceArea from world.country 
+where 
+(SurfaceArea) >3000000 xor (Population > 250000000)
+
+# Show the name and population in millions and the GDP in billions for the countries of the continent 'South America'. Use the ROUND function to show the values to two decimal places.
+select name,Round(Population/1000000,2) as poinmil, Round(GDP/100000000,2) as GNPinBil from world.country 
+where 
+Continent='South America'
+
+# Show the name and capital where the name and the capital have the same number of characters.
+
+select name,Capital from world.country 
+where 
+length(name)=length(Capital)
