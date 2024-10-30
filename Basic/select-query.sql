@@ -41,3 +41,11 @@ Continent='South America'
 select name,Capital from world.country 
 where 
 length(name)=length(Capital)
+
+# -- Show the name and the capital where the first letters of each match. 
+# -- Don't include countries where the name and the capital are the same word.
+
+SELECT name,  capital
+FROM world
+where  LEFT(name,1) = LEFT(capital,1)
+AND name <> capital
