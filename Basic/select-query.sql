@@ -70,3 +70,7 @@ select * from world.city  order by Population desc limit 4
 
 -- SQL SELECT TOP Clause with WHERE Clause Example
 select * from world.city where Population < 1000000 order by Population desc limit 4 
+
+-- SQL LIMIT With OFFSET Clause Example here offset means to exclude the first two rows
+SELECT * FROM world.city
+LIMIT 2 OFFSET 2;
