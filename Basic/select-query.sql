@@ -57,3 +57,16 @@ select count(*),CountryCode from world.city group by CountryCode
 select sum(Population),CountryCode  from world.city group by CountryCode;
 
 -- SELECT Statement with HAVING Clause
+select sum(Population),CountryCode from world.city group by CountryCode
+having SUM(Population) > 10000000
+
+-- SELECT Statement with ORDER BY clause in SQL
+SELECT * FROM world.city ORDER BY `Population` DESC;  
+
+-- SQL SELECT TOP Clause Example
+select * from world.city limit 4
+
+select * from world.city  order by Population desc limit 4 
+
+-- SQL SELECT TOP Clause with WHERE Clause Example
+select * from world.city where Population < 1000000 order by Population desc limit 4 
