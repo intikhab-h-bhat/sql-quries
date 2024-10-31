@@ -49,3 +49,11 @@ SELECT name,  capital
 FROM world
 where  LEFT(name,1) = LEFT(capital,1)
 AND name <> capital
+
+
+
+-- SQL SELECT Statement with GROUP BY Clause
+select count(*),CountryCode from world.city group by CountryCode
+select sum(Population),CountryCode  from world.city group by CountryCode;
+
+-- SELECT Statement with HAVING Clause
