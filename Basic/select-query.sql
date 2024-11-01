@@ -74,3 +74,10 @@ select * from world.city where Population < 1000000 order by Population desc lim
 -- SQL LIMIT With OFFSET Clause Example here offset means to exclude the first two rows
 SELECT * FROM world.city
 LIMIT 2 OFFSET 2;
+
+--  to select the last row
+SELECT  name from world.city order by Name desc limit 1
+
+-- use of random
+SELECT  * from world.city order by Rand() -- for enire table
+SELECT  * from world.city order by Rand() limit 1 -- to get single row randomly
