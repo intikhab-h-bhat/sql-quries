@@ -18,3 +18,20 @@ player like 'Mario%'
 SELECT player, teamid,coach,gtime
   FROM goal join eteam on teamid=id
  WHERE gtime<=10
+
+
+-- List the dates of the matches and the name of the team in which 'Fernando Santos' was the team1 coach.
+select mdate,teamname from game join eteam
+on team1=eteam.id 
+where coach='Fernando Santos'
+
+
+
+--  List the player for every goal scored in a game where the stadium was 'National Stadium, Warsaw'
+select player from goal join game 
+on id=matchid where stadium ='National Stadium, Warsaw'
+
+-- show the name of all players who scored a goal against Germany.
+SELECT distinct player
+  FROM game JOIN goal ON matchid = id 
+    WHERE (teamid!='GER' and (team1 ='GER' or team2='GER'))
