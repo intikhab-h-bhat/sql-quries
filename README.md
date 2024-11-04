@@ -4,3 +4,4 @@
 3. creating databse and tables
 4. inserting data in tables
 5. Drop,Delete and Truncate
+6. inner Join
