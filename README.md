@@ -5,3 +5,4 @@
 4. inserting data in tables
 5. Drop,Delete and Truncate
 6. inner Join
+7. Outer join(left and right)
