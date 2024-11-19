@@ -5,6 +5,9 @@ Select * from world.city
 # select all names 
 select Name from world.city 
 
+  # select all names 
+select Name,CountryCode from world.city 
+
 select ID,Name,CountryCode from world.city 
 
 # To get the name and population of a city
